@@ -3,17 +3,22 @@
 <p class="changeable">Paragraph 2</p>
 <p class="changeable">Paragraph 3</p>
 
+<ul id="changedList"></ul> 
+
 <script>
   const button = document.getElementById("changeAllButton");
   const paragraphs = document.getElementsByClassName("changeable");
+  const ul = document.getElementById("changedList");
 
   button.addEventListener("click", function () {
+    ul.innerHTML = "";
+    // Change <p> content
     for (let i = 0; i < paragraphs.length; i++) {
       paragraphs[i].textContent = "Changed!";
+
+      const li = document.createElement("li");
+      li.textContent = "Changed!";
+      changedList.appendChild(li);
     }
   });
-
-  //TODO: Display the changed text in an unordered list <ul>
-
-
 </script>
