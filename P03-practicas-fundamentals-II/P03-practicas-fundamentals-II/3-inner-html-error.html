@@ -1,14 +1,18 @@
 <button id="htmlButton">Add HTML</button>
+<button id="removeHtmlButton">Remove HTML</button>
 <div id="htmlDiv"></div>
 <script>
   const button = document.getElementById("htmlButton");
   const div = document.getElementById("htmlDiv");
-
+  const removeButton = document.getElementById("removeHtmlButton");
   button.addEventListener("click", function () {
-    div.innerHTML = "<p>New Paragraph</p>"; // Error: innerHtml should be innerHTML
+    div.innerHTML = "<p>New Paragraph</p>"; 
   });
 
-  //TODO: Create another button to remove the Html conten from the div
 
+  // Delete HTML div button
+  removeButton.addEventListener("click", function () {
+    div.innerHTML = ""; 
+  });
 
 </script>
