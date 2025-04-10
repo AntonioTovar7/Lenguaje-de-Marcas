@@ -1,0 +1,17 @@
+<button id="toggleButton">Toggle</button>
+<button id="showButton">Show</button> 
+<div id="myDiv" style="display: block;">This is a hidden div</div>
+<script>
+  const button = document.getElementById("toggleButton");
+  const div = document.getElementById("myDiv");
+
+  button.addEventListener("click", function () {
+      div.style.display = "none";
+  });
+
+   // Segundo botón para mostrar el div
+   showButton.addEventListener("click", function () {
+      div.style.display = "block";
+  });
+</script>
+

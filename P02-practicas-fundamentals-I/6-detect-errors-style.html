@@ -1,0 +1,19 @@
+<button id="fontSizeButton">Change Font Size</button>
+<button id="resetFontSizeButton">Reset Font Size</button> 
+<p id="fontSizeParagraph">This is some text.</p>
+
+<script>
+  const button = document.getElementById("fontSizeButton");
+  const resetButton = document.getElementById("resetFontSizeButton"); 
+  const paragraph = document.getElementById("fontSizeParagraph");
+
+
+  button.addEventListener("click", function () {
+    paragraph.style.fontSize = "24px";
+  });
+
+  //reset fontsize
+  resetButton.addEventListener("click", function () {
+    paragraph.style.fontSize = "12px";
+  });
+</script>

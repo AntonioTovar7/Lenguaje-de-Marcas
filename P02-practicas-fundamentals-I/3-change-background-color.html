@@ -1,0 +1,30 @@
+<h1>Welcome back background</h1>
+<button id="colorButton">Change Color</button>
+<button id="returnColorButton">Return Color</button> 
+<button id="changeH1ColorButton">Change H1 Color</button>
+<div id="colorDiv" style="width: 100px; height: 100px; background-color: lightblue;"></div>
+
+<script>
+  const colorButton = document.getElementById("colorButton");
+  const returnColorButton = document.getElementById("returnColorButton");
+  const changeH1ColorButton = document.getElementById("changeH1ColorButton");
+  const div = document.getElementById("colorDiv");
+  const h1 = document.querySelector("h1"); 
+
+ 
+  colorButton.addEventListener("click", function () {
+    div.style.backgroundColor = "red";
+  });
+
+  //  Botton to return color
+  returnColorButton.addEventListener("click", function () {
+    div.style.backgroundColor = "lightblue";
+  });
+
+  // Botton to change h1 color if div is red
+  changeH1ColorButton.addEventListener("click", function () {
+    if (div.style.backgroundColor === "red") {
+      h1.style.color = "blue";
+    }
+  });
+</script>

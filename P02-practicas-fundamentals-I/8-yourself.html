@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My JavaScript Contact</title>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+
+    p {
+      margin-bottom: 20px;
+    }
+
+    button {
+      margin-right: 10px;
+      padding: 8px 15px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>First Javascript contact</h1>
+  <p id="text">This is the initial text.</p>
+
+  <button id="helloButton">Hello World</button>
+  <button id="goodbyeButton">Goodbye World</button>
+  <button id="boldButton">Bold</button>
+  <button id="italicButton">Italic</button>
+  <button id="colorButton">Change Color</button>
+
+  <script>
+    const textElement = document.getElementById("text");
+    const helloButton = document.getElementById("helloButton");
+    const goodbyeButton = document.getElementById("goodbyeButton");
+    const boldButton = document.getElementById("boldButton");
+    const italicButton = document.getElementById("italicButton");
+    const colorButton = document.getElementById("colorButton");
+
+    // Default color
+    const defaultColor = "black";
+    let isColorChanged = false;
+
+    // "Hello World"
+    helloButton.addEventListener("click", function () {
+      textElement.textContent = "Hello World";
+    });
+
+    // "Goodbye World"
+    goodbyeButton.addEventListener("click", function () {
+      textElement.textContent = "Goodbye World";
+    });
+
+    // Text bold
+    boldButton.addEventListener("click", function () {
+      textElement.style.fontWeight = "bold";
+    });
+
+    // Text italic
+    italicButton.addEventListener("click", function () {
+      textElement.style.fontStyle = "italic";
+    });
+
+    // Text color red and back to original
+    colorButton.addEventListener("click", function () {
+      if (isColorChanged) {
+        textElement.style.color = defaultColor;
+        isColorChanged = false;
+      } else {
+        textElement.style.color = "red";
+        isColorChanged = true;
+      }
+    });
+  </script>
+
+</body>
+
+</html>

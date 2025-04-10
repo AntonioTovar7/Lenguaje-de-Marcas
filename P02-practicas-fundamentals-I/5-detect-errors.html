@@ -1,0 +1,11 @@
+<h1 id="title">Click Me</h1>
+<button id="myButton">Click Me</button>
+
+<script>
+  const button = document.getElementById("myButton"); 
+  const title = document.getElementById("title");    
+
+  button.addEventListener("click", function () {
+    title.textContent = "Clicked!"; 
+  });
+</script>
