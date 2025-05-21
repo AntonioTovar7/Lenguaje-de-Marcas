@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Clima por Ciudad</title>
+</head>
+<body>
+
+<nav style="background:#333;padding:1rem;margin-bottom:1rem;">
+  <a href="index.html" style="color:white;margin-right:1rem;">Inicio</a>
+  <a href="clima.html" style="color:white;margin-right:1rem;">Clima</a>
+  <a href="noticias.html" style="color:white;margin-right:1rem;">Noticias</a>
+  <a href="acerca.html" style="color:white;margin-right:1rem;">Acerca</a>
+  <a href="contacto.html" style="color:white;">Contacto</a>
+</nav>
+
+<h1>Clima por ciudad</h1>
+
+<label for="city-select">Elige ciudad: </label>
+<select id="city-select">
+  <option value="Málaga" selected>Málaga</option>
+  <option value="Madrid">Madrid</option>
+  <option value="Barcelona">Barcelona</option>
+  <option value="Sevilla">Sevilla</option>
+  <option value="Valencia">Valencia</option>
+</select>
+
+<h2>Hoy</h2>
+<div id="clima-hoy" style="display:flex;gap:1rem;"></div>
+
+<h2>Próximos 5 días</h2>
+<div id="clima-cinco" style="display:flex;gap:1rem;flex-wrap:wrap;"></div>
+
+<h3>Alertas</h3>
+<div id="alertas"></div>
+
+<script src="js/weather.js"></script>
+<script src="js/clima_page.js"></script>
+</body>
+</html>
