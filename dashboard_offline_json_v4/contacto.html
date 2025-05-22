@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Contacto</title>
+</head>
+<body>
+
+<nav style="background:#333;padding:1rem;margin-bottom:1rem;">
+  <a href="index.html" style="color:white;margin-right:1rem;">Inicio</a>
+  <a href="clima.html" style="color:white;margin-right:1rem;">Clima</a>
+  <a href="noticias.html" style="color:white;margin-right:1rem;">Noticias</a>
+  <a href="acerca.html" style="color:white;margin-right:1rem;">Acerca</a>
+  <a href="contacto.html" style="color:white;">Contacto</a>
+</nav>
+
+<h1>Contacto</h1>
+<form id="contact-form" style="max-width:500px;margin:auto;display:flex;flex-direction:column;gap:10px;">
+  <label>Nombre
+    <input type="text" id="name" style="width:100%;padding:6px;">
+  </label>
+  <label>Email
+    <input type="email" id="email" style="width:100%;padding:6px;">
+  </label>
+  <label>Teléfono
+    <input type="tel" id="phone" style="width:100%;padding:6px;">
+  </label>
+  <label>Mensaje
+    <textarea id="message" rows="4" style="width:100%;padding:6px;"></textarea>
+  </label>
+  <button type="submit" style="padding:8px;background:#333;color:white;">Enviar</button>
+</form>
+<script src="js/contact.js"></script>
+</body>
+</html>
